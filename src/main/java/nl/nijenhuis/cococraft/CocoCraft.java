@@ -6,14 +6,15 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import nl.nijenhuis.cococraft.proxy.IProxy;
+import nl.nijenhuis.cococraft.reference.Reference;
 
-@Mod(modid = "CocoCraft", name = "CocoCraft", version = "1.7.10-1.0")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class CocoCraft {
 
-    @Mod.Instance("CocoCraft")
+    @Mod.Instance(Reference.MOD_NAME)
     public static CocoCraft instance;
 
-    @SidedProxy(clientSide = "nl.nijenhuis.cococraft.ClientProxy", serverSide = "nl.nijenhuis.cococraft.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler

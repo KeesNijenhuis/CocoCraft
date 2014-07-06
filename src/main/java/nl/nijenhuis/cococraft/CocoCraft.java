@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import nl.nijenhuis.cococraft.configuration.ConfigurationHandler;
 import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
 
@@ -19,7 +20,7 @@ public class CocoCraft {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler

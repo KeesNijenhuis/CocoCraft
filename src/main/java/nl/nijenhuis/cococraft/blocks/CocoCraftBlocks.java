@@ -11,6 +11,11 @@ public class CocoCraftBlocks {
     public static void init() {
 
         oreCoco = new BlockOre().setBlockName("oreCoco").setBlockTextureName(Reference.RESOURCE + "oreCoco");
+        oreMithril = new BlockOre().setBlockName("oreMithril").setBlockTextureName(Reference.RESOURCE + "oreMithril");
+        oreSilver = new BlockOre().setBlockName("oreSilver").setBlockTextureName(Reference.RESOURCE + "oreSilver");
+        oreAdamant = new BlockOre().setBlockName("oreAdamant").setBlockTextureName(Reference.RESOURCE + "oreAdamant");
+        oreRunite = new BlockOre().setBlockName("oreRunite").setBlockTextureName(Reference.RESOURCE + "oreRunite");
+
 
         registerBlocks();
     }
@@ -18,5 +23,9 @@ public class CocoCraftBlocks {
     public static void registerBlocks() {
 
         RegisterHelper.registerBlock(oreCoco);
+        RegisterHelper.registerBlock(oreMithril);
+        RegisterHelper.registerBlock(oreSilver);
+        RegisterHelper.registerBlock(oreAdamant);
+        RegisterHelper.registerBlock(oreRunite);
     }
 }

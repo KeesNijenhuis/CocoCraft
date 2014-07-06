@@ -1,4 +1,7 @@
 tile.oreCoco.name=Coco Ore
-
+tile.oreMithril.name=Mithril Ore
+tile.oreSilver.name=Silver Ore
+tile.oreAdamant.name=Adamant Ore
+tile.oreRunite.name=runite Ore
 
 itemGroup.tabCocoCraft=CocoCraft

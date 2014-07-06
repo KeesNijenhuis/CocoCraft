@@ -15,24 +15,25 @@ public class ConfigurationHandler {
     public static void init(File configFile) {
 
         //create config file
-        if(configuration == null) {
+        if (configuration == null) {
             configuration = new Configuration(configFile);
+            loadConfiguration();
         }
 
-        }
+    }
 
     @SubscribeEvent
     public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
 
-        if(event.modID.equalsIgnoreCase(Reference.MOD_ID)) {
+        if (event.modID.equalsIgnoreCase(Reference.MOD_ID)) {
             loadConfiguration();
         }
     }
 
-    public void loadConfiguration() {
+    private static void loadConfiguration() {
         testValue = configuration.getBoolean("Config Value", Configuration.CATEGORY_GENERAL, false, "A Value, quick throw a PokéBall!");
 
-        if(configuration.hasChanged()) {
+        if (configuration.hasChanged()) {
             configuration.save();
         }
     }

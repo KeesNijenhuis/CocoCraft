@@ -10,4 +10,14 @@ tile.storageSilver.name=Silver Block
 tile.storageAdamant.name=Adamant Block
 tile.storageRunite.name=runite Block
 
+item.grindedCoco.name=Grinded Coco Ore
+item.grindedMithril.name=Grinded Mithril Ore
+item.grindedSilver.name=Grinded Silver Ore
+item.grindedAdamant.name=Grinded Adamant Ore
+item.grindedRunite.name=Grinded Runite Ore
+item.grindedIron.name=Grinded Iron Ore
+item.grindedGold.name=Grinded Gold Ore
+
+
+
 itemGroup.tabCocoCraft=CocoCraft

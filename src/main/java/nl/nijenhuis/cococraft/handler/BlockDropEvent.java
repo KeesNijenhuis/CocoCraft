@@ -5,13 +5,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
+import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 
 public class BlockDropEvent {
 
     @SubscribeEvent
     //TODO change all ore drops to CC item.
     public void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
-        if(event.block == Blocks.iron_ore) {
+        if(event.block == CocoCraftBlocks.oreCoco) {
             event.drops.clear(); // removes the drop from iron ore.
             event.drops.add(new ItemStack(Items.diamond_axe)); // adds a new itemstack for the drop
         }

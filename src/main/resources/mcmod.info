@@ -1,0 +1,21 @@
+[
+{
+  "modid": "CocoCraft",
+  "name": "CocoCraft",
+  "description": "My long running mod for Minecraft",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Kees "YoWazzup" Nijenhuis"
+  ],
+  "credits": "My Mother <3",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

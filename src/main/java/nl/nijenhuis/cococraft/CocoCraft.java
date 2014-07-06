@@ -6,6 +6,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.handler.BlockDropEvent;
@@ -48,4 +51,11 @@ public class CocoCraft {
 
         LogHelper.info("Post Initialization Complete");
     }
+
+    public static CreativeTabs tabCocoCraft = new CreativeTabs("tabCocoCraft") {
+        @Override
+        public Item getTabIconItem() {
+            return Items.apple;
+        }
+    };
 }

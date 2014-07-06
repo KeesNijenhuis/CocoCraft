@@ -6,7 +6,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
+import nl.nijenhuis.cococraft.handler.BlockDropEvent;
 import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 import nl.nijenhuis.cococraft.proxy.IProxy;
@@ -30,6 +32,7 @@ public class CocoCraft {
 
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        MinecraftForge.EVENT_BUS.register(new BlockDropEvent());
         LogHelper.info("Pre Initialization Complete");
 
     }

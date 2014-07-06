@@ -2,7 +2,6 @@ package nl.nijenhuis.cococraft.handler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;

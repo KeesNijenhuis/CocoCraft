@@ -2,6 +2,12 @@ tile.oreCoco.name=Coco Ore
 tile.oreMithril.name=Mithril Ore
 tile.oreSilver.name=Silver Ore
 tile.oreAdamant.name=Adamant Ore
-tile.oreRunite.name=runite Ore
+tile.oreRunite.name=Runite Ore
+
+tile.storageCoco.name=Coco Block
+tile.storageMithril.name=Mithril Block
+tile.storageSilver.name=Silver Block
+tile.storageAdamant.name=Adamant Block
+tile.storageRunite.name=runite Block
 
 itemGroup.tabCocoCraft=CocoCraft

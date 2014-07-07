@@ -1,4 +1,4 @@
-package nl.nijenhuis.cococraft.handler;
+package nl.nijenhuis.cococraft.handler.recipes;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;

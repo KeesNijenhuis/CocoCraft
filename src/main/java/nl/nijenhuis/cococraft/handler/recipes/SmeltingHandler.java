@@ -1,7 +1,8 @@
-package nl.nijenhuis.cococraft.handler;
+package nl.nijenhuis.cococraft.handler.recipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
+import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 
 public class SmeltingHandler {

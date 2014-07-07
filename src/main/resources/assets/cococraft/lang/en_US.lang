@@ -31,5 +31,6 @@ item.ingotSilver.name=Silver Ingot
 item.ingotAdamant.name=Adamant Ingot
 item.ingotRunite.name=Runite Ingot
 
+container.blastFurnace=Blast Furnace
 
 itemGroup.tabCocoCraft=CocoCraft

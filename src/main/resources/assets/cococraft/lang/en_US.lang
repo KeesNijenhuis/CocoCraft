@@ -18,6 +18,18 @@ item.grindedRunite.name=Grinded Runite Ore
 item.grindedIron.name=Grinded Iron Ore
 item.grindedGold.name=Grinded Gold Ore
 
+item.nuggetCoco.name=Coco Nugget
+item.nuggetMithril.name=Mithril Nugget
+item.nuggetSilver.name=Silver Nugget
+item.nuggetAdamant.name=Adamant Nugget
+item.nuggetRunite.name=Runite Nugget
+item.nuggetIron.name=Iron Nugget
+
+item.ingotCoco.name=Coco Ingot
+item.ingotMithril.name=Mithril Ingot
+item.ingotSilver.name=Silver Ingot
+item.ingotAdamant.name=Adamant Ingot
+item.ingotRunite.name=Runite Ingot
 
 
 itemGroup.tabCocoCraft=CocoCraft

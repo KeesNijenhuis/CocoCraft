@@ -2,14 +2,13 @@ package nl.nijenhuis.cococraft.handler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
-import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 
 public class SmeltingHandler {
 
     public static void recipes() {
 
-        if(ConfigurationHandler.hardRecipes == true) {
+        if(ConfigurationHandler.hardRecipes) {
             GameRegistry.addSmelting(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.nuggetCoco, 1), 0.1F);
             GameRegistry.addSmelting(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.nuggetMithril, 1), 0.1F);
             GameRegistry.addSmelting(CocoCraftItems.grindedSilver, new ItemStack(CocoCraftItems.nuggetSilver, 1), 0.1F);

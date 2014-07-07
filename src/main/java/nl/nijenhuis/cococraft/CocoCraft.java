@@ -13,6 +13,7 @@ import net.minecraftforge.common.MinecraftForge;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.handler.BlockDropEvent;
 import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
+import nl.nijenhuis.cococraft.handler.SmeltingHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
@@ -42,6 +43,8 @@ public class CocoCraft {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+
+        SmeltingHandler.recipes();
 
         LogHelper.info("Initialization Complete");
     }

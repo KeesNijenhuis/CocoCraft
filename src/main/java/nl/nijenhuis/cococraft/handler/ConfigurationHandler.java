@@ -10,7 +10,7 @@ import java.io.File;
 public class ConfigurationHandler {
 
     public static Configuration configuration;
-    public static boolean testValue = false;
+    public static boolean hardRecipes = true;
 
     public static void init(File configFile) {
 
@@ -31,7 +31,7 @@ public class ConfigurationHandler {
     }
 
     private static void loadConfiguration() {
-        testValue = configuration.getBoolean("Config Value", Configuration.CATEGORY_GENERAL, false, "A Value, quick throw a PokéBall!");
+        hardRecipes = configuration.getBoolean("Hard Recipes", Configuration.CATEGORY_GENERAL, true, "Determines if the mod uses hard recipes for smelting.");
 
         if (configuration.hasChanged()) {
             configuration.save();

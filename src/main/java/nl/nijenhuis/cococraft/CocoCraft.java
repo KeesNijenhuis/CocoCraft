@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -15,6 +16,7 @@ import net.minecraftforge.common.MinecraftForge;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.handler.BlockDropEvent;
 import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
+import nl.nijenhuis.cococraft.handler.MyGuiHandler;
 import nl.nijenhuis.cococraft.handler.recipes.RecipeRemover;
 import nl.nijenhuis.cococraft.handler.recipes.SmeltingHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
@@ -27,6 +29,8 @@ public class CocoCraft {
 
     @Mod.Instance(Reference.MOD_NAME)
     public static CocoCraft instance;
+
+    public static MyGuiHandler guiHandler = new MyGuiHandler();
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
@@ -51,6 +55,8 @@ public class CocoCraft {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, guiHandler);
 
         SmeltingHandler.recipes();
 

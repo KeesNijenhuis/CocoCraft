@@ -20,7 +20,6 @@ import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
 import nl.nijenhuis.cococraft.handler.MachineRecipeHandler;
 import nl.nijenhuis.cococraft.handler.MyGuiHandler;
 import nl.nijenhuis.cococraft.handler.recipes.RecipeRemover;
-import nl.nijenhuis.cococraft.handler.recipes.SmeltingHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
@@ -63,8 +62,6 @@ public class CocoCraft {
     public void init(FMLInitializationEvent event) {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, guiHandler);
-
-        SmeltingHandler.recipes();
 
         LogHelper.info("Initialization Complete");
     }

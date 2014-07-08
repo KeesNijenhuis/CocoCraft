@@ -11,35 +11,57 @@ public class BlockDropEvent {
 
     @SubscribeEvent
     public void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
-        if (event.block == CocoCraftBlocks.oreCoco) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedCoco)); // adds a new itemstack for the drop
+        if (ConfigurationHandler.customOreDrops) {
+            if (event.block == CocoCraftBlocks.oreCoco) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedCoco));
+            }
+            if (event.block == CocoCraftBlocks.oreMithril) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedMithril));
+            }
+            if (event.block == CocoCraftBlocks.oreSilver) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedSilver));
+            }
+            if (event.block == CocoCraftBlocks.oreAdamant) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedAdamant));
+            }
+            if (event.block == CocoCraftBlocks.oreRunite) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedRunite));
+            }
+            if (event.block == Blocks.iron_ore) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedIron));
+            }
+            if (event.block == Blocks.gold_ore) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftItems.grindedGold));
+            }
+        } else {
+            if (event.block == CocoCraftBlocks.oreCoco) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftBlocks.oreCoco));
+            }
+            if (event.block == CocoCraftBlocks.oreMithril) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftBlocks.oreMithril));
+            }
+            if (event.block == CocoCraftBlocks.oreSilver) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftBlocks.oreSilver));
+            }
+            if (event.block == CocoCraftBlocks.oreAdamant) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftBlocks.oreAdamant));
+            }
+            if (event.block == CocoCraftBlocks.oreRunite) {
+                event.drops.clear();
+                event.drops.add(new ItemStack(CocoCraftBlocks.oreRunite));
+            }
         }
-        if (event.block == CocoCraftBlocks.oreMithril) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedMithril)); // adds a new itemstack for the drop
-        }
-        if (event.block == CocoCraftBlocks.oreSilver) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedSilver)); // adds a new itemstack for the drop
-        }
-        if (event.block == CocoCraftBlocks.oreAdamant) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedAdamant)); // adds a new itemstack for the drop
-        }
-        if (event.block == CocoCraftBlocks.oreRunite) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedRunite)); // adds a new itemstack for the drop
-        }
-        if (event.block == Blocks.iron_ore) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedIron)); // adds a new itemstack for the drop
-        }
-        if (event.block == Blocks.gold_ore) {
-            event.drops.clear(); // removes the drop from iron ore.
-            event.drops.add(new ItemStack(CocoCraftItems.grindedGold)); // adds a new itemstack for the drop
-        }
-
     }
 
 

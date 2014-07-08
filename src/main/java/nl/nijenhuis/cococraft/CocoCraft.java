@@ -40,8 +40,11 @@ public class CocoCraft {
         RecipeRemover.removeRecipes(new ItemStack(Blocks.furnace), "blockFurnace");
 
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
         MinecraftForge.EVENT_BUS.register(new BlockDropEvent());
+
         LogHelper.info("Pre Initialization Complete");
 
     }

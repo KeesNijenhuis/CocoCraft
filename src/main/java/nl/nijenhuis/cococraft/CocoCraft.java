@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -16,12 +17,14 @@ import net.minecraftforge.common.MinecraftForge;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.handler.BlockDropEvent;
 import nl.nijenhuis.cococraft.handler.ConfigurationHandler;
+import nl.nijenhuis.cococraft.handler.MachineRecipeHandler;
 import nl.nijenhuis.cococraft.handler.MyGuiHandler;
 import nl.nijenhuis.cococraft.handler.recipes.RecipeRemover;
 import nl.nijenhuis.cococraft.handler.recipes.SmeltingHandler;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
+import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
 import nl.nijenhuis.cococraft.utility.LogHelper;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
@@ -40,6 +43,9 @@ public class CocoCraft {
 
         CocoCraftBlocks.init();
         CocoCraftItems.init();
+        MachineRecipeHandler.init();
+
+        GameRegistry.registerTileEntity(TileEntityBlast.class, "blastFurnace");
 
         RecipeRemover.removeRecipes(new ItemStack(Blocks.furnace), "blockFurnace");
 

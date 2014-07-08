@@ -8,7 +8,6 @@ public class CocoCraftBlocks {
 
     public static Block oreCoco, oreMithril, oreSilver, oreAdamant, oreRunite;
     public static Block storageCoco, storageMithril, storageSilver, storageAdamant, storageRunite;
-    public static Block blockBlastFurnace;
 
     public static void init() {
 
@@ -24,7 +23,6 @@ public class CocoCraftBlocks {
         storageAdamant = new BlockOre().setBlockName("storageAdamant").setBlockTextureName(Reference.RESOURCE + "storageAdamant");
         storageRunite = new BlockOre().setBlockName("storageRunite").setBlockTextureName(Reference.RESOURCE + "storageRunite");
 
-        blockBlastFurnace = new BlockBlastFurnace(false).setBlockName("blockBlastFurnace");
 
 
         registerBlocks();
@@ -45,6 +43,6 @@ public class CocoCraftBlocks {
         RegisterHelper.registerBlock(storageAdamant);
         RegisterHelper.registerBlock(storageRunite);
 
-        RegisterHelper.registerBlock(blockBlastFurnace);
+
     }
 }

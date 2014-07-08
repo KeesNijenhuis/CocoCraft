@@ -14,7 +14,7 @@ import org.lwjgl.opengl.GL11;
 @SideOnly(Side.CLIENT)
 public class GuiBlast extends GuiContainer {
 
-    private static final ResourceLocation blastGuiTextures = new ResourceLocation(Reference.RESOURCE +"textures/gui/blastFurnace.png");
+    private static final ResourceLocation blastGuiTextures = new ResourceLocation(Reference.RESOURCE + "textures/gui/blastFurnace.png");
     private TileEntityBlast tileBlast;
 
     public GuiBlast(InventoryPlayer invPlayer, TileEntityBlast tile) {
@@ -38,7 +38,7 @@ public class GuiBlast extends GuiContainer {
         int l = (height - ySize) / 2;
         drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
 
-        if(tileBlast.isBurning()) {
+        if (tileBlast.isBurning()) {
             int i1 = tileBlast.getBurnTimeRemainingScaled(13);
             drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
             i1 = tileBlast.getCookProgressScaled(24);

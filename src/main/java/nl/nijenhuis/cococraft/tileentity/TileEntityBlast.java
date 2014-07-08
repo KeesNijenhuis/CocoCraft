@@ -259,7 +259,6 @@ public class TileEntityBlast extends TileEntity implements ISidedInventory {
                 if (block == Blocks.coal_block) return 720;
 
 
-
             }
             return GameRegistry.getFuelValue(itemStack);
         }

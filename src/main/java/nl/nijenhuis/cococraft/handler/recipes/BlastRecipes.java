@@ -35,7 +35,7 @@ public class BlastRecipes {
         Map.Entry entry;
 
         do {
-            if(!iterator.hasNext()) {
+            if (!iterator.hasNext()) {
                 return null;
             }
             entry = (Map.Entry) iterator.next();

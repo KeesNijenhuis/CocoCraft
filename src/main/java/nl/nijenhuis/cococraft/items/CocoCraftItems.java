@@ -32,7 +32,7 @@ public class CocoCraftItems {
         ingotSilver = new ModItem().setUnlocalizedName("ingotSilver").setTextureName(Reference.RESOURCE + "ingotSilver");
         ingotAdamant = new ModItem().setUnlocalizedName("ingotAdamant").setTextureName(Reference.RESOURCE + "ingotAdamant");
         ingotRunite = new ModItem().setUnlocalizedName("ingotRunite").setTextureName(Reference.RESOURCE + "ingotRunite");
-      
+
 
         registerItems();
     }

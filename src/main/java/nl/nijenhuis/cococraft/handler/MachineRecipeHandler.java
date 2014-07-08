@@ -17,7 +17,7 @@ public class MachineRecipeHandler {
     }
 
     public static void blastFurnaceRecipes() {
-        if(ConfigurationHandler.hardRecipes) {
+        if (ConfigurationHandler.hardRecipes) {
             addSmelting(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.nuggetCoco));
             addSmelting(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.nuggetMithril));
             addSmelting(CocoCraftItems.grindedSilver, new ItemStack(CocoCraftItems.nuggetSilver));

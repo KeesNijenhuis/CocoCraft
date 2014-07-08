@@ -24,7 +24,9 @@ public class CocoCraftBlocks {
         storageAdamant = new BlockOre().setBlockName("storageAdamant").setBlockTextureName(Reference.RESOURCE + "storageAdamant");
         storageRunite = new BlockOre().setBlockName("storageRunite").setBlockTextureName(Reference.RESOURCE + "storageRunite");
 
+
         blockBlastFurnace = new BlockBlast(false).setBlockName("blockBlastFurnace");
+
 
         registerBlocks();
     }
@@ -43,6 +45,7 @@ public class CocoCraftBlocks {
         RegisterHelper.registerBlock(storageSilver);
         RegisterHelper.registerBlock(storageAdamant);
         RegisterHelper.registerBlock(storageRunite);
+
 
         RegisterHelper.registerBlock(blockBlastFurnace);
 

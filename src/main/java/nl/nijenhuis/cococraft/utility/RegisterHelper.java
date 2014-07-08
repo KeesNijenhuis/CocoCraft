@@ -17,7 +17,7 @@ public class RegisterHelper {
     }
 
     public static void registerBlock(Block block, Class<? extends ItemBlock> itemBlock, Object... constructorArgs) {
-        GameRegistry.registerBlock(block,itemBlock, block.getUnlocalizedName().replace("tile.", ""), null, constructorArgs);
+        GameRegistry.registerBlock(block, itemBlock, block.getUnlocalizedName().replace("tile.", ""), null, constructorArgs);
     }
 
     public static void registerItem(Item item) {

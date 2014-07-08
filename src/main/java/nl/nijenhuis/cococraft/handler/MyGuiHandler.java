@@ -15,10 +15,10 @@ public class MyGuiHandler implements IGuiHandler {
 
         TileEntity tile = world.getTileEntity(x, y, z);
 
-        if(tile != null) {
-            switch(ID) {
-                case 1 :
-                    return new ContainerBlast(player.inventory, (TileEntityBlast)tile);
+        if (tile != null) {
+            switch (ID) {
+                case 1:
+                    return new ContainerBlast(player.inventory, (TileEntityBlast) tile);
             }
         }
 
@@ -30,10 +30,10 @@ public class MyGuiHandler implements IGuiHandler {
 
         TileEntity tile = world.getTileEntity(x, y, z);
 
-        if(tile != null) {
-            switch(ID) {
-                case 1 :
-                    return new GuiBlast(player.inventory, (TileEntityBlast)tile);
+        if (tile != null) {
+            switch (ID) {
+                case 1:
+                    return new GuiBlast(player.inventory, (TileEntityBlast) tile);
             }
         }
 

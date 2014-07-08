@@ -37,13 +37,13 @@ public class BlockBlast extends BlockContainer {
         setCreativeTab(CocoCraft.tabCocoCraft);
         setHardness(5.0F);
     }
-    
+
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int i, float f, float f1, float f2) {
-        if(world.isRemote) {
+        if (world.isRemote) {
             return true;
-        } else if(!entityPlayer.isSneaking()) {
-            TileEntityBlast tile = (TileEntityBlast)world.getTileEntity(x, y, z);
-            if(tile != null) {
+        } else if (!entityPlayer.isSneaking()) {
+            TileEntityBlast tile = (TileEntityBlast) world.getTileEntity(x, y, z);
+            if (tile != null) {
                 entityPlayer.openGui(CocoCraft.instance, 1, world, x, y, z);
             }
             return true;

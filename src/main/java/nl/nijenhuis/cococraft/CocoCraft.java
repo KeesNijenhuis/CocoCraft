@@ -25,7 +25,7 @@ import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
 import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
 import nl.nijenhuis.cococraft.utility.LogHelper;
-import nl.nijenhuis.cococraft.world.CocoCraftWorld;
+import nl.nijenhuis.cococraft.world.CocoCraftWorldGenerator;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class CocoCraft {
@@ -45,7 +45,6 @@ public class CocoCraft {
         CocoCraftItems.init();
         MachineRecipeHandler.init();
 
-        CocoCraftWorld.mainRegistry();
 
         GameRegistry.registerTileEntity(TileEntityBlast.class, "blastFurnace");
 
@@ -57,6 +56,8 @@ public class CocoCraft {
 
         MinecraftForge.EVENT_BUS.register(new BlockDropEvent());
 
+        GameRegistry.registerWorldGenerator(new CocoCraftWorldGenerator(), 0);
+
         LogHelper.info("Pre Initialization Complete");
 
     }
@@ -65,6 +66,7 @@ public class CocoCraft {
     public void init(FMLInitializationEvent event) {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, guiHandler);
+
 
         LogHelper.info("Initialization Complete");
     }

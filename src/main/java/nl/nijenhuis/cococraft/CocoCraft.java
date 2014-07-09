@@ -80,7 +80,7 @@ public class CocoCraft {
     public static CreativeTabs tabCocoCraft = new CreativeTabs("tabCocoCraft") {
         @Override
         public Item getTabIconItem() {
-            return Items.apple;
+            return CocoCraftItems.dustCoco;
         }
     };
 }

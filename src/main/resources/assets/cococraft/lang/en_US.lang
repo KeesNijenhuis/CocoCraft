@@ -33,6 +33,14 @@ item.ingotSilver.name=Silver Ingot
 item.ingotAdamant.name=Adamant Ingot
 item.ingotRunite.name=Runite Ingot
 
+item.dustCoco.name=Coco Ore Dust
+item.dustMithril.name=Mithril Ore Dust
+item.dustSilver.name=Silver Ore Dust
+item.dustAdamant.name=Adamant Ore Dust
+item.dustRunite.name=Runite Ore Dust
+item.dustIron.name=Iron Ore Dust
+item.dustGold.name=Gold Ore Dust
+
 container.blastFurnace=Blast Furnace
 
 itemGroup.tabCocoCraft=CocoCraft

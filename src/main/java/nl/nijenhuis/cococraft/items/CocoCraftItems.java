@@ -9,6 +9,7 @@ public class CocoCraftItems {
     public static Item grindedCoco, grindedMithril, grindedSilver, grindedAdamant, grindedRunite, grindedIron, grindedGold;
     public static Item nuggetCoco, nuggetMithril, nuggetSilver, nuggetAdamant, nuggetRunite, nuggetIron;
     public static Item ingotCoco, ingotMithril, ingotSilver, ingotAdamant, ingotRunite;
+    public static Item dustCoco, dustMithril, dustSilver, dustAdamant, dustRunite, dustIron, dustGold;
 
     public static void init() {
 
@@ -32,6 +33,14 @@ public class CocoCraftItems {
         ingotSilver = new ModItem().setUnlocalizedName("ingotSilver").setTextureName(Reference.RESOURCE + "ingotSilver");
         ingotAdamant = new ModItem().setUnlocalizedName("ingotAdamant").setTextureName(Reference.RESOURCE + "ingotAdamant");
         ingotRunite = new ModItem().setUnlocalizedName("ingotRunite").setTextureName(Reference.RESOURCE + "ingotRunite");
+
+        dustCoco = new ModItem().setUnlocalizedName("dustCoco").setTextureName(Reference.RESOURCE + "dustCoco");
+        dustMithril = new ModItem().setUnlocalizedName("dustMithril").setTextureName(Reference.RESOURCE + "dustMithril");
+        dustSilver = new ModItem().setUnlocalizedName("dustSilver").setTextureName(Reference.RESOURCE + "dustSilver");
+        dustAdamant = new ModItem().setUnlocalizedName("dustAdamant").setTextureName(Reference.RESOURCE + "dustAdamant");
+        dustRunite = new ModItem().setUnlocalizedName("dustRunite").setTextureName(Reference.RESOURCE + "dustRunite");
+        dustIron = new ModItem().setUnlocalizedName("dustIron").setTextureName(Reference.RESOURCE + "dustIron");
+        dustGold = new ModItem().setUnlocalizedName("dustGold").setTextureName(Reference.RESOURCE + "dustGold");
 
 
         registerItems();
@@ -59,6 +68,15 @@ public class CocoCraftItems {
         RegisterHelper.registerItem(ingotSilver);
         RegisterHelper.registerItem(ingotAdamant);
         RegisterHelper.registerItem(ingotRunite);
+
+        RegisterHelper.registerItem(dustCoco);
+        RegisterHelper.registerItem(dustMithril);
+        RegisterHelper.registerItem(dustSilver);
+        RegisterHelper.registerItem(dustAdamant);
+        RegisterHelper.registerItem(dustRunite);
+        RegisterHelper.registerItem(dustIron);
+        RegisterHelper.registerItem(dustGold);
+
 
     }
 }

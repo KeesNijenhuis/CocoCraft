@@ -25,6 +25,7 @@ import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
 import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
 import nl.nijenhuis.cococraft.utility.LogHelper;
+import nl.nijenhuis.cococraft.world.CocoCraftWorld;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class CocoCraft {
@@ -43,6 +44,8 @@ public class CocoCraft {
         CocoCraftBlocks.init();
         CocoCraftItems.init();
         MachineRecipeHandler.init();
+
+        CocoCraftWorld.mainRegistry();
 
         GameRegistry.registerTileEntity(TileEntityBlast.class, "blastFurnace");
 

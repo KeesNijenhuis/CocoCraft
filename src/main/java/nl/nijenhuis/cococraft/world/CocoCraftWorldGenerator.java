@@ -7,7 +7,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
-import nl.nijenhuis.cococraft.utility.LogHelper;
 
 import java.util.Random;
 

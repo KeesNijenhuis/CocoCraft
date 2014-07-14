@@ -11,7 +11,6 @@ import nl.nijenhuis.cococraft.items.CocoCraftItems;
 
 public class MachineRecipeHandler {
 
-
     public static void init() {
         blastFurnaceRecipes();
     }

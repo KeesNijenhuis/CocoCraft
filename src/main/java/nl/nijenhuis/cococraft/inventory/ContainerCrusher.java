@@ -8,20 +8,20 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import nl.nijenhuis.cococraft.handler.recipes.BlastRecipes;
-import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
+import nl.nijenhuis.cococraft.handler.recipes.CrusherRecipes;
+import nl.nijenhuis.cococraft.tileentity.TileEntityCrusher;
 
-public class ContainerBlast extends Container {
-    private TileEntityBlast tileBlast;
+public class ContainerCrusher extends Container {
+    private TileEntityCrusher tileCrusher;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
-    public ContainerBlast(InventoryPlayer invPlayer, TileEntityBlast tileEntityBlast) {
-        this.tileBlast = tileEntityBlast;
-        this.addSlotToContainer(new Slot(tileEntityBlast, 0, 56, 17));
-        this.addSlotToContainer(new Slot(tileEntityBlast, 1, 56, 53));
-        this.addSlotToContainer(new SlotCocoCraft(invPlayer.player, tileEntityBlast, 2, 116, 35));
+    public ContainerCrusher(InventoryPlayer invPlayer, TileEntityCrusher tileEntityCrusher) {
+        this.tileCrusher = tileEntityCrusher;
+        this.addSlotToContainer(new Slot(tileEntityCrusher, 0, 56, 17));
+        this.addSlotToContainer(new Slot(tileEntityCrusher, 1, 56, 53));
+        this.addSlotToContainer(new SlotCocoCraft(invPlayer.player, tileEntityCrusher, 2, 116, 35));
         int i;
 
         for (i = 0; i < 3; ++i) {
@@ -37,9 +37,9 @@ public class ContainerBlast extends Container {
 
     public void addCraftingToCrafters(ICrafting iCrafting) {
         super.addCraftingToCrafters(iCrafting);
-        iCrafting.sendProgressBarUpdate(this, 0, this.tileBlast.blastCookTime);
-        iCrafting.sendProgressBarUpdate(this, 1, this.tileBlast.blastBurnTime);
-        iCrafting.sendProgressBarUpdate(this, 2, this.tileBlast.currentItemBurnTime);
+        iCrafting.sendProgressBarUpdate(this, 0, this.tileCrusher.crusherCookTime);
+        iCrafting.sendProgressBarUpdate(this, 1, this.tileCrusher.crusherBurnTime);
+        iCrafting.sendProgressBarUpdate(this, 2, this.tileCrusher.currentItemBurnTime);
     }
 
     /**
@@ -51,41 +51,41 @@ public class ContainerBlast extends Container {
         for (int i = 0; i < this.crafters.size(); ++i) {
             ICrafting icrafting = (ICrafting) this.crafters.get(i);
 
-            if (this.lastCookTime != this.tileBlast.blastCookTime) {
-                icrafting.sendProgressBarUpdate(this, 0, this.tileBlast.blastCookTime);
+            if (this.lastCookTime != this.tileCrusher.crusherCookTime) {
+                icrafting.sendProgressBarUpdate(this, 0, this.tileCrusher.crusherCookTime);
             }
 
-            if (this.lastBurnTime != this.tileBlast.blastBurnTime) {
-                icrafting.sendProgressBarUpdate(this, 1, this.tileBlast.blastBurnTime);
+            if (this.lastBurnTime != this.tileCrusher.crusherBurnTime) {
+                icrafting.sendProgressBarUpdate(this, 1, this.tileCrusher.crusherBurnTime);
             }
 
-            if (this.lastItemBurnTime != this.tileBlast.currentItemBurnTime) {
-                icrafting.sendProgressBarUpdate(this, 2, this.tileBlast.currentItemBurnTime);
+            if (this.lastItemBurnTime != this.tileCrusher.currentItemBurnTime) {
+                icrafting.sendProgressBarUpdate(this, 2, this.tileCrusher.currentItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.tileBlast.blastCookTime;
-        this.lastBurnTime = this.tileBlast.blastBurnTime;
-        this.lastItemBurnTime = this.tileBlast.currentItemBurnTime;
+        this.lastCookTime = this.tileCrusher.crusherCookTime;
+        this.lastBurnTime = this.tileCrusher.crusherBurnTime;
+        this.lastItemBurnTime = this.tileCrusher.currentItemBurnTime;
     }
 
     @SideOnly(Side.CLIENT)
     public void updateProgressBar(int i, int j) {
         if (i == 0) {
-            this.tileBlast.blastCookTime = j;
+            this.tileCrusher.crusherCookTime = j;
         }
 
         if (i == 1) {
-            this.tileBlast.blastBurnTime = j;
+            this.tileCrusher.crusherBurnTime = j;
         }
 
         if (i == 2) {
-            this.tileBlast.currentItemBurnTime = j;
+            this.tileCrusher.currentItemBurnTime = j;
         }
     }
 
     public boolean canInteractWith(EntityPlayer entityPlayer) {
-        return this.tileBlast.isUseableByPlayer(entityPlayer);
+        return this.tileCrusher.isUseableByPlayer(entityPlayer);
     }
 
     /**
@@ -106,11 +106,11 @@ public class ContainerBlast extends Container {
 
                 slot.onSlotChange(itemstack1, itemstack);
             } else if (i != 1 && i != 0) {
-                if (BlastRecipes.smelting().getSmeltingResult(itemstack1) != null) {
+                if (CrusherRecipes.smelting().getSmeltingResult(itemstack1) != null) {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
                         return null;
                     }
-                } else if (TileEntityBlast.isItemFuel(itemstack1)) {
+                } else if (TileEntityCrusher.isItemFuel(itemstack1)) {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false)) {
                         return null;
                     }

@@ -10,7 +10,6 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,6 +46,7 @@ public class CocoCraft {
 
 
         GameRegistry.registerTileEntity(TileEntityBlast.class, "blastFurnace");
+        GameRegistry.registerTileEntity(TileEntityBlast.class, "crusher");
 
         RecipeRemover.removeRecipes(new ItemStack(Blocks.furnace), "blockFurnace");
 

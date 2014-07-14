@@ -11,6 +11,7 @@ tile.storageAdamant.name=Adamant Block
 tile.storageRunite.name=runite Block
 
 tile.blockBlastFurnace.name=Blast Furnace
+tile.blockCrusher.name=Crusher
 
 item.grindedCoco.name=Grinded Coco Ore
 item.grindedMithril.name=Grinded Mithril Ore
@@ -42,5 +43,6 @@ item.dustIron.name=Iron Ore Dust
 item.dustGold.name=Gold Ore Dust
 
 container.blastFurnace=Blast Furnace
+container.crusher=Crusher
 
 itemGroup.tabCocoCraft=CocoCraft

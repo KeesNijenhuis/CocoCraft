@@ -8,7 +8,7 @@ public class CocoCraftBlocks {
 
     public static Block oreCoco, oreMithril, oreSilver, oreAdamant, oreRunite;
     public static Block storageCoco, storageMithril, storageSilver, storageAdamant, storageRunite;
-    public static Block blockBlastFurnace;
+    public static Block blockBlastFurnace, blockCrusher;
 
     public static void init() {
 
@@ -26,6 +26,7 @@ public class CocoCraftBlocks {
 
 
         blockBlastFurnace = new BlockBlast(false).setBlockName("blockBlastFurnace");
+        blockCrusher = new BlockCrusher(false).setBlockName("blockCrusher");
 
 
         registerBlocks();
@@ -48,7 +49,7 @@ public class CocoCraftBlocks {
 
 
         RegisterHelper.registerBlock(blockBlastFurnace);
-
+        RegisterHelper.registerBlock(blockCrusher);
 
     }
 }

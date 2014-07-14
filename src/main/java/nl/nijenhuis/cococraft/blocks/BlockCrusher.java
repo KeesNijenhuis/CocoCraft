@@ -17,11 +17,11 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import nl.nijenhuis.cococraft.CocoCraft;
 import nl.nijenhuis.cococraft.reference.Reference;
-import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
+import nl.nijenhuis.cococraft.tileentity.TileEntityCrusher;
 
 import java.util.Random;
 
-public class BlockBlast extends BlockContainer {
+public class BlockCrusher extends BlockContainer {
 
     private final Random rand = new Random();
     public static boolean isActive;
@@ -31,7 +31,7 @@ public class BlockBlast extends BlockContainer {
     @SideOnly(Side.CLIENT)
     private IIcon iIcon2;
 
-    public BlockBlast(boolean active) {
+    public BlockCrusher(boolean active) {
         super(Material.iron);
         isActive = active;
         setCreativeTab(CocoCraft.tabCocoCraft);
@@ -42,9 +42,9 @@ public class BlockBlast extends BlockContainer {
         if (world.isRemote) {
             return true;
         } else if (!entityPlayer.isSneaking()) {
-            TileEntityBlast tile = (TileEntityBlast) world.getTileEntity(x, y, z);
+            TileEntityCrusher tile = (TileEntityCrusher) world.getTileEntity(x, y, z);
             if (tile != null) {
-                entityPlayer.openGui(CocoCraft.instance, 1, world, x, y, z);
+                entityPlayer.openGui(CocoCraft.instance, 2, world, x, y, z);
             }
             return true;
         } else {
@@ -54,7 +54,7 @@ public class BlockBlast extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
-        return new TileEntityBlast();
+        return new TileEntityCrusher();
     }
 
     @SideOnly(Side.CLIENT)
@@ -64,9 +64,9 @@ public class BlockBlast extends BlockContainer {
 
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon(Reference.RESOURCE + "blastFurnace_side");
-        iIcon2 = iconRegister.registerIcon(Reference.RESOURCE + "blastFurnace_front");
-        iIcon1 = iconRegister.registerIcon(Reference.RESOURCE + "blastFurnace_top");
+        blockIcon = iconRegister.registerIcon(Reference.RESOURCE + "crusher_side");
+        iIcon2 = iconRegister.registerIcon(Reference.RESOURCE + "crusher_front");
+        iIcon1 = iconRegister.registerIcon(Reference.RESOURCE + "crusher_top");
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLiving, ItemStack itemStack) {
@@ -89,17 +89,17 @@ public class BlockBlast extends BlockContainer {
         }
 
         if (itemStack.hasDisplayName()) {
-            ((TileEntityBlast) world.getTileEntity(x, y, z)).setInvName(itemStack.getDisplayName());
+            ((TileEntityCrusher) world.getTileEntity(x, y, z)).setInvName(itemStack.getDisplayName());
         }
     }
 
     public void breakBlock(World world, int x, int y, int z, Block block, int i) {
         if (!isActive) {
-            TileEntityBlast tileEntityBlast = (TileEntityBlast) world.getTileEntity(x, y, z);
+            TileEntityCrusher tileEntityCrusher = (TileEntityCrusher) world.getTileEntity(x, y, z);
 
-            if (tileEntityBlast != null) {
-                for (int i1 = 0; i1 < tileEntityBlast.getSizeInventory(); ++i1) {
-                    ItemStack itemstack = tileEntityBlast.getStackInSlot(i1);
+            if (tileEntityCrusher != null) {
+                for (int i1 = 0; i1 < tileEntityCrusher.getSizeInventory(); ++i1) {
+                    ItemStack itemstack = tileEntityCrusher.getStackInSlot(i1);
 
                     if (itemstack != null) {
                         float f = this.rand.nextFloat() * 0.8F + 0.1F;

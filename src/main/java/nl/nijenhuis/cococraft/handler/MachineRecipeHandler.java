@@ -2,11 +2,13 @@ package nl.nijenhuis.cococraft.handler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import nl.nijenhuis.cococraft.blocks.CocoCraftBlocks;
 import nl.nijenhuis.cococraft.handler.recipes.BlastRecipes;
+import nl.nijenhuis.cococraft.handler.recipes.CrusherRecipes;
 import nl.nijenhuis.cococraft.items.CocoCraftItems;
 
 public class MachineRecipeHandler {
@@ -15,7 +17,7 @@ public class MachineRecipeHandler {
         blastFurnaceRecipes();
     }
 
-    public static void blastFurnaceRecipes() {
+    private static void blastFurnaceRecipes() {
         if (ConfigurationHandler.hardRecipes) {
             addSmelting(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.nuggetCoco));
             addSmelting(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.nuggetMithril));
@@ -40,15 +42,48 @@ public class MachineRecipeHandler {
 
     }
 
-    public static void addSmelting(Block input, ItemStack output) {
+    private static void crusherRecipes() {
+        if(ConfigurationHandler.hardRecipes) {
+            addCrushing(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.dustCoco, 2));
+            addCrushing(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.dustMithril, 2));
+            addCrushing(CocoCraftItems.grindedSilver, new ItemStack(CocoCraftItems.dustSilver, 2));
+            addCrushing(CocoCraftItems.grindedAdamant, new ItemStack(CocoCraftItems.dustAdamant, 2));
+            addCrushing(CocoCraftItems.grindedRunite, new ItemStack(CocoCraftItems.dustRunite, 2));
+            addCrushing(CocoCraftItems.grindedGold, new ItemStack(CocoCraftItems.dustGold, 2));
+            addCrushing(CocoCraftItems.grindedIron, new ItemStack(CocoCraftItems.dustIron, 2));
+        }
+        else {
+            addCrushing(CocoCraftBlocks.oreCoco, new ItemStack(CocoCraftItems.dustCoco, 2));
+            addCrushing(CocoCraftBlocks.oreMithril, new ItemStack(CocoCraftItems.dustMithril, 2));
+            addCrushing(CocoCraftBlocks.oreSilver, new ItemStack(CocoCraftItems.dustSilver, 2));
+            addCrushing(CocoCraftBlocks.oreAdamant, new ItemStack(CocoCraftItems.dustAdamant, 2));
+            addCrushing(CocoCraftBlocks.oreRunite, new ItemStack(CocoCraftItems.dustRunite, 2));
+            addCrushing(Blocks.gold_ore, new ItemStack(CocoCraftItems.dustGold, 2));
+            addCrushing(Blocks.iron_ore, new ItemStack(CocoCraftItems.dustIron, 2));
+        }
+    }
+
+    private static void addSmelting(Block input, ItemStack output) {
         BlastRecipes.smelting().addSmelting(input, output);
     }
 
-    public static void addSmelting(Item input, ItemStack output) {
+    private static void addSmelting(Item input, ItemStack output) {
         BlastRecipes.smelting().addSmelting(input, output);
     }
 
-    public static void addSmelting(ItemStack input, ItemStack output) {
+    private static void addSmelting(ItemStack input, ItemStack output) {
         BlastRecipes.smelting().addSmelting(input, output);
+    }
+
+    private static void addCrushing(Block input, ItemStack output) {
+        CrusherRecipes.smelting().addSmelting(input, output);
+    }
+
+    private static void addCrushing(Item input, ItemStack output) {
+        CrusherRecipes.smelting().addSmelting(input, output);
+    }
+
+    private static void addCrushing(ItemStack input, ItemStack output) {
+        CrusherRecipes.smelting().addSmelting(input, output);
     }
 }

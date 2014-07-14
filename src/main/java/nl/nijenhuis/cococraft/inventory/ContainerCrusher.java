@@ -21,7 +21,7 @@ public class ContainerCrusher extends Container {
         this.tileCrusher = tileEntityCrusher;
         this.addSlotToContainer(new Slot(tileEntityCrusher, 0, 56, 17));
         this.addSlotToContainer(new Slot(tileEntityCrusher, 1, 56, 53));
-        this.addSlotToContainer(new SlotCocoCraft(invPlayer.player, tileEntityCrusher, 2, 116, 35));
+        this.addSlotToContainer(new SlotCrusher(invPlayer.player, tileEntityCrusher, 2, 116, 35));
         int i;
 
         for (i = 0; i < 3; ++i) {

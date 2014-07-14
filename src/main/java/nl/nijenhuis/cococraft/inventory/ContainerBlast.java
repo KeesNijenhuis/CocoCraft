@@ -21,7 +21,7 @@ public class ContainerBlast extends Container {
         this.tileBlast = tileEntityBlast;
         this.addSlotToContainer(new Slot(tileEntityBlast, 0, 56, 17));
         this.addSlotToContainer(new Slot(tileEntityBlast, 1, 56, 53));
-        this.addSlotToContainer(new SlotCocoCraft(invPlayer.player, tileEntityBlast, 2, 116, 35));
+        this.addSlotToContainer(new SlotBlast(invPlayer.player, tileEntityBlast, 2, 116, 35));
         int i;
 
         for (i = 0; i < 3; ++i) {

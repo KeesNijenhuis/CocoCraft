@@ -22,7 +22,7 @@ public class MyGuiHandler implements IGuiHandler {
             switch (ID) {
                 case 1:
                     return new ContainerBlast(player.inventory, (TileEntityBlast) tile);
-                case 2:
+                case 3:
                     return new ContainerCrusher(player.inventory, (TileEntityCrusher)tile);
             }
         }
@@ -39,8 +39,10 @@ public class MyGuiHandler implements IGuiHandler {
             switch (ID) {
                 case 1:
                     return new GuiBlast(player.inventory, (TileEntityBlast) tile);
-                case 2:
+                case 3:
                     return new GuiCrusher(player.inventory, (TileEntityCrusher)tile);
+                default:
+                    return null;
             }
         }
 

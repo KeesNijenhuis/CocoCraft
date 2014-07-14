@@ -5,13 +5,13 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class SlotCocoCraft extends Slot {
+public class SlotCrusher extends Slot {
 
 
     private EntityPlayer thePlayer;
     private int field_75228_b;
 
-    public SlotCocoCraft(EntityPlayer p_i1813_1_, IInventory p_i1813_2_, int p_i1813_3_, int p_i1813_4_, int p_i1813_5_) {
+    public SlotCrusher(EntityPlayer p_i1813_1_, IInventory p_i1813_2_, int p_i1813_3_, int p_i1813_4_, int p_i1813_5_) {
         super(p_i1813_2_, p_i1813_3_, p_i1813_4_, p_i1813_5_);
         this.thePlayer = p_i1813_1_;
     }

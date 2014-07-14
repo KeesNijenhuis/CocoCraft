@@ -23,6 +23,7 @@ import nl.nijenhuis.cococraft.items.CocoCraftItems;
 import nl.nijenhuis.cococraft.proxy.IProxy;
 import nl.nijenhuis.cococraft.reference.Reference;
 import nl.nijenhuis.cococraft.tileentity.TileEntityBlast;
+import nl.nijenhuis.cococraft.tileentity.TileEntityCrusher;
 import nl.nijenhuis.cococraft.utility.LogHelper;
 import nl.nijenhuis.cococraft.world.CocoCraftWorldGenerator;
 
@@ -44,9 +45,8 @@ public class CocoCraft {
         CocoCraftItems.init();
         MachineRecipeHandler.init();
 
-
         GameRegistry.registerTileEntity(TileEntityBlast.class, "blastFurnace");
-        GameRegistry.registerTileEntity(TileEntityBlast.class, "crusher");
+        GameRegistry.registerTileEntity(TileEntityCrusher.class, "crusher");
 
         RecipeRemover.removeRecipes(new ItemStack(Blocks.furnace), "blockFurnace");
 

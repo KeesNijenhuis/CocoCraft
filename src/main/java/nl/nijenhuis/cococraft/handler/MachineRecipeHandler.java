@@ -15,6 +15,7 @@ public class MachineRecipeHandler {
 
     public static void init() {
         blastFurnaceRecipes();
+        crusherRecipes();
     }
 
     private static void blastFurnaceRecipes() {
@@ -26,18 +27,32 @@ public class MachineRecipeHandler {
             addSmelting(CocoCraftItems.grindedRunite, new ItemStack(CocoCraftItems.nuggetRunite));
             addSmelting(CocoCraftItems.grindedGold, new ItemStack(Items.gold_nugget));
             addSmelting(CocoCraftItems.grindedIron, new ItemStack(CocoCraftItems.nuggetIron));
-        } else {
-            GameRegistry.addSmelting(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.ingotCoco, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.ingotMithril, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftItems.grindedSilver, new ItemStack(CocoCraftItems.ingotSilver, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftItems.grindedAdamant, new ItemStack(CocoCraftItems.ingotAdamant, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftItems.grindedRunite, new ItemStack(CocoCraftItems.ingotRunite, 1), 0.1F);
 
-            GameRegistry.addSmelting(CocoCraftBlocks.oreCoco, new ItemStack(CocoCraftItems.ingotCoco, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftBlocks.oreMithril, new ItemStack(CocoCraftItems.ingotMithril, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftBlocks.oreSilver, new ItemStack(CocoCraftItems.ingotSilver, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftBlocks.oreAdamant, new ItemStack(CocoCraftItems.ingotAdamant, 1), 0.1F);
-            GameRegistry.addSmelting(CocoCraftBlocks.oreRunite, new ItemStack(CocoCraftItems.ingotRunite, 1), 0.1F);
+            addSmelting(CocoCraftItems.dustCoco, new ItemStack(CocoCraftItems.nuggetCoco));
+            addSmelting(CocoCraftItems.dustMithril, new ItemStack(CocoCraftItems.nuggetMithril));
+            addSmelting(CocoCraftItems.dustSilver, new ItemStack(CocoCraftItems.nuggetSilver));
+            addSmelting(CocoCraftItems.dustAdamant, new ItemStack(CocoCraftItems.nuggetAdamant));
+            addSmelting(CocoCraftItems.dustRunite, new ItemStack(CocoCraftItems.nuggetRunite));
+            addSmelting(CocoCraftItems.dustGold, new ItemStack(Items.gold_nugget));
+            addSmelting(CocoCraftItems.dustIron, new ItemStack(CocoCraftItems.nuggetIron));
+        } else {
+            addSmelting(CocoCraftItems.grindedCoco, new ItemStack(CocoCraftItems.ingotCoco, 1));
+            addSmelting(CocoCraftItems.grindedMithril, new ItemStack(CocoCraftItems.ingotMithril, 1));
+            addSmelting(CocoCraftItems.grindedSilver, new ItemStack(CocoCraftItems.ingotSilver, 1));
+            addSmelting(CocoCraftItems.grindedAdamant, new ItemStack(CocoCraftItems.ingotAdamant, 1));
+            addSmelting(CocoCraftItems.grindedRunite, new ItemStack(CocoCraftItems.ingotRunite, 1));
+
+            addSmelting(CocoCraftItems.dustCoco, new ItemStack(CocoCraftItems.ingotCoco, 2));
+            addSmelting(CocoCraftItems.dustMithril, new ItemStack(CocoCraftItems.ingotMithril, 2));
+            addSmelting(CocoCraftItems.dustSilver, new ItemStack(CocoCraftItems.ingotSilver, 2));
+            addSmelting(CocoCraftItems.dustAdamant, new ItemStack(CocoCraftItems.ingotAdamant, 2));
+            addSmelting(CocoCraftItems.dustRunite, new ItemStack(CocoCraftItems.ingotRunite, 2));
+
+            addSmelting(CocoCraftBlocks.oreCoco, new ItemStack(CocoCraftItems.ingotCoco, 1));
+            addSmelting(CocoCraftBlocks.oreMithril, new ItemStack(CocoCraftItems.ingotMithril, 1));
+            addSmelting(CocoCraftBlocks.oreSilver, new ItemStack(CocoCraftItems.ingotSilver, 1));
+            addSmelting(CocoCraftBlocks.oreAdamant, new ItemStack(CocoCraftItems.ingotAdamant, 1));
+            addSmelting(CocoCraftBlocks.oreRunite, new ItemStack(CocoCraftItems.ingotRunite, 1));
         }
 
     }

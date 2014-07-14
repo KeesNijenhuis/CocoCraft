@@ -28,7 +28,6 @@ public class CocoCraftBlocks {
         blockBlastFurnace = new BlockBlast(false).setBlockName("blockBlastFurnace");
         blockCrusher = new BlockCrusher(false).setBlockName("blockCrusher");
 
-
         registerBlocks();
     }
 

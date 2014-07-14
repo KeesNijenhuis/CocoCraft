@@ -44,7 +44,7 @@ public class BlockCrusher extends BlockContainer {
         } else if (!entityPlayer.isSneaking()) {
             TileEntityCrusher tile = (TileEntityCrusher) world.getTileEntity(x, y, z);
             if (tile != null) {
-                entityPlayer.openGui(CocoCraft.instance, 3, world, x, y, z);
+                entityPlayer.openGui(CocoCraft.instance, 2, world, x, y, z);
             }
             return true;
         } else {
